@@ -1,0 +1,41 @@
+.home__banner {
+    padding: 5rem 0;
+    background: url(../img/home-bg.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    &__wrapper {
+        @include flexBox(center);
+        flex-wrap: wrap;
+        .home__banner__text {
+            @include flexBox(center);
+            flex-direction: column;
+            text-align: center;
+            h1 {
+                @include textFormat(1.4, 3.2rem);
+                margin: 0 0 1.8rem;
+                color: $clr-dark;
+                span {
+                    color: $clr-blue;
+                }
+            }
+            p {
+                @include textFormat(1.8, 1.6rem, 100);
+                color: $clr-dark5;
+            }
+            .home__banner__textBtn {
+                @include flexBox(center);
+                margin: 2rem 0 0;
+                a {
+                    @include btnFormat(1.2rem 3.5rem);
+                }
+                .learnBtn {
+                    @extend %btnWhite;
+                }
+                .contactBtn {
+                    @extend %btnBlue;
+                }
+            }
+        }
+    }
+}
