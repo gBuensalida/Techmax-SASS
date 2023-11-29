@@ -1124,10 +1124,127 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 0.5rem;
   margin: 2rem 0 0;
 }
 .home__banner__wrapper .home__banner__text .home__banner__textBtn a {
   padding: 1.2rem 3.5rem;
   font-weight: 600;
   font-size: 1.5rem;
+}
+.home__banner__wrapper .home__banner__text .home__banner__textBtn .learnBtn {
+  filter: drop-shadow(0 0 8px rgba(211, 211, 211, 0.562));
+}
+@media screen and (min-width: 1200px) {
+  .home__banner__wrapper {
+    justify-content: space-between;
+  }
+  .home__banner__wrapper .home__banner__text {
+    max-width: 42rem;
+    text-align: left;
+    align-items: flex-start;
+  }
+  .home__banner__wrapper .home__banner__text h1 {
+    margin: 0 0 2rem;
+  }
+  .home__banner__wrapper .home__banner__text .home__banner__textBtn {
+    margin: 2.5rem 0 0 0;
+    gap: 2rem;
+  }
+}
+
+.home__services {
+  padding: 5rem 0;
+}
+.home__services .home__services__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+.home__services .home__services__wrapper .home__services__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: white;
+  filter: drop-shadow(0 0 5px lightgray);
+  max-width: 51rem;
+  padding: 3rem;
+  gap: 2.5rem;
+  border-radius: 2rem;
+  transition: 0.5s ease;
+}
+.home__services .home__services__wrapper .home__services__item:hover {
+  background: #602bdf;
+  transform: translate(0, -5px);
+}
+.home__services .home__services__wrapper .home__services__item:hover .home__services__icon {
+  background: white;
+}
+.home__services .home__services__wrapper .home__services__item:hover .home__services__context h3 {
+  color: white;
+}
+.home__services .home__services__wrapper .home__services__item:hover .home__services__context p {
+  color: white;
+}
+.home__services .home__services__wrapper .home__services__item:hover .home__services__link a {
+  color: white;
+}
+.home__services .home__services__wrapper .home__services__item .home__services__icon {
+  background: rgba(215, 215, 215, 0.168627451);
+  border-radius: 50%;
+  padding: 1.9rem;
+  transition: 0.5s ease;
+  color: #602bdf;
+}
+.home__services .home__services__wrapper .home__services__item .home__services__icon i {
+  font-size: 3.5rem;
+}
+.home__services .home__services__wrapper .home__services__item .home__services__context {
+  text-align: center;
+  max-width: 45rem;
+}
+.home__services .home__services__wrapper .home__services__item .home__services__context h3 {
+  line-height: 1.8;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 0 0 1.5rem;
+}
+.home__services .home__services__wrapper .home__services__item .home__services__context p {
+  line-height: 1.8;
+  font-size: 1.5rem;
+  font-weight: 100;
+  color: #555555;
+}
+.home__services .home__services__wrapper .home__services__item .home__services__link a {
+  text-decoration: underline;
+  line-height: 1.8;
+  font-size: 1.8rem;
+  font-weight: 100;
+}
+@media screen and (min-width: 768px) {
+  .home__services__wrapper .home__services__item {
+    max-width: 33rem;
+  }
+  .home__services__wrapper .home__services__item .home__services__context p {
+    max-width: 26rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .home__services__wrapper .home__services__item {
+    max-width: 29rem;
+  }
+  .home__services__wrapper .home__services__item .home__services__context p {
+    max-width: 22rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .home__services__wrapper .home__services__item {
+    max-width: 35rem;
+  }
+  .home__services__wrapper .home__services__item .home__services__context p {
+    max-width: 29rem;
+  }
 }/*# sourceMappingURL=main.css.map */
