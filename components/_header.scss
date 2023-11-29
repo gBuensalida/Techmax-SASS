@@ -1,0 +1,215 @@
+.header {
+    background: transparent;
+    box-shadow: 0 0 3px lightgrey;
+    // position: fixed;
+    // width: 100%;
+    // height: 100%;
+    &__wrapper {
+        @include flexBox;
+        .header__nav {
+            position: absolute;
+            width: 90%;
+            background: $clr-light;
+            left: 5%;
+            top: 6.6rem;
+            filter: drop-shadow(0 0 3px lightgray);
+            max-height: 0rem;
+            overflow: hidden;
+            @include transitionEase;
+            &.open {
+                max-height: 43%;
+                overflow: auto;
+            }
+            ul {
+                @include flexBox(unset, unset);
+                flex-direction: column;
+                li {
+                    @include flexBox(unset, unset);
+                    flex-direction: column;
+                    a {
+                        color: $clr-gray;
+                        border-top: 1px solid lightblue;
+                        padding: 1.5rem;
+                        font-size: 1.5rem;
+                    }
+                }
+                li {
+                    .nav__link {
+                        color: $clr-gray;
+                        border-top: 1px solid lightblue;
+                        padding: 1.5rem;
+                        cursor: pointer;
+                        font-size: 1.5rem;
+                        @include flexBox;
+                        .link__btn {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 0.1rem;
+                            i {
+                                display: none;
+                            }
+                            span {
+                                height: 0.2rem;
+                                width: 0.8rem;
+                                background-color: $clr-gray;
+                                border-radius: 0.5rem;
+                                &:nth-child(1) {
+                                    transform: translate(0.2px, 2.5px) rotate(90deg);
+                                }
+                                &:nth-child(2) {
+                                    transform: translate(0px, -0.5px);
+                                }
+                            }
+                            &.open {
+                                span {
+                                    &:nth-child(1) {
+                                        opacity: 0;
+                                    } 
+                                }
+                            }
+                        }
+                    }
+                    .dropdown__menu {
+                        max-height: 0rem;
+                        overflow: hidden;
+                        background: $clr-light;
+                        li {
+                            a {
+                                padding: 1.5rem 3rem;
+                            }
+                        }
+                        &.open {
+                            max-height: 100%;
+                        }
+                    }
+                }
+                
+            }
+        }
+        .header__btn {
+            display: none;
+            gap: 1rem;
+                a {
+                    @include btnFormat(0.8rem 2.5rem, 100, 1.4rem);
+                    color: $clr-light;
+                    background: $clr-blue;
+                    border-radius: 3rem;
+                }
+        }
+        .burger__btn {
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+            span {
+                height: 0.4rem;
+                width: 3.5rem;
+                border-radius: 3rem;
+                background-color: $clr-dark;
+            }
+            &.open {
+                span {
+                    width: 2rem;
+                    height: 0.2rem;
+                    border-radius: unset;
+                    &:nth-child(1) {
+                        transform: translate(-5.5px, 4.8px) rotate(53deg);
+                    }
+                    &:nth-child(2) {
+                        opacity: 0;
+                    }
+                    &:nth-child(3) {
+                        transform: translate(-5.5px, -4.8px) rotate(-53deg); 
+                    }
+                }
+            }
+        }
+    }
+    @include mediaQuery($breakpoint-xl) {
+        &__wrapper {
+            .header__nav {
+                position: unset;
+                max-height: unset;
+                top: unset;
+                width: unset;
+                left: unset;
+                filter: unset;
+                overflow: unset;
+                background: transparent;
+                ul {
+                    gap: 3rem;
+                    flex-direction: unset;
+                    li {
+                        @include flexBox(unset, unset);
+                        flex-direction: column;
+                        a {
+                            color: $clr-dark5;
+                            border: none;
+                            padding: unset;
+                            font-size: 1.55rem;
+                        }
+                    }
+                    li {
+                        .nav__link {
+                            border: none;
+                            padding: unset;
+                            cursor: pointer;
+                            font-size: 1.55rem;
+                            display: unset;
+                            @include flexBox;
+                            gap: 0rem;
+                            color: $clr-dark5;
+                            .link__btn {
+                                i {
+                                    display: unset;
+                                    transform: rotate(180deg) scale(0.6);
+                                }
+                                span {
+                                    display: none;
+                                }
+                            }
+                        }
+                        .dropdown__menu {
+                            position: absolute;
+                            max-height: unset;
+                            flex-direction: column;
+                            visibility: hidden;
+                            opacity: 0%;
+                            top: 8.5rem;
+                            transform: translate(-15px, 0);
+                            gap: unset;
+                            width: 20rem;
+                            @include transitionEase;
+                            filter: drop-shadow(0 0 5px lightgray);
+                            li {
+                                a {
+                                    border-top: 1px solid lightgray;
+                                    padding: 1rem 1.5rem;
+                                    @include transitionEase;
+                                    &:hover {
+                                        padding: 1rem 2.3rem;
+                                        background: rgb(244, 243, 243);
+                                    }
+                                }
+                            }
+                        }
+                        &:hover .dropdown__menu {
+                            visibility: visible;
+                            opacity: 100%;
+                            top: 6.5rem;
+                        }
+                    }
+                    
+                }
+            }
+            .header__btn {
+                display: flex;
+            }
+            .burger__btn {
+                display: none;
+            }
+        }
+    }
+}
+.section {
+    height: 100vh;
+}

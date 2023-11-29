@@ -1,0 +1,31 @@
+@mixin flexBox($justify: space-between, $align: center) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin mediaQuery($width: $breakpoint-sm) {
+    @media screen and (min-width: $width) {
+        @content;
+    }
+}
+
+@mixin transitionEase($dur: 0.5s) {
+    transition: $dur ease;
+}
+
+@mixin transformScale($multiplier: 1.05) {
+    transform: scale($multiplier);
+}
+
+@mixin textFormat($height: 1.8, $size: 3.5rem, $weight: 600) {
+    line-height: $height;
+    font-size: $size;
+    font-weight: $weight;
+}
+
+@mixin btnFormat($pad: 0.8rem 2.5rem, $weight: 600, $size: 1.5rem) {
+    padding: $pad;
+    font-weight: $weight;
+    font-size: $size;
+}
