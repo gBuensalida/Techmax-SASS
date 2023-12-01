@@ -1,4 +1,4 @@
-// BANNER
+// BANNER responsive missing for m, and l
 .home__banner {
     padding: 5rem 0;
     background: url(../img/home-bg.jpg);
@@ -62,9 +62,10 @@
         }
     }
 }
-// SERVICES
+// SERVICES responsive done 
 .home__services {
     padding: 5rem 0;
+    background: $clr-light;
     .home__services__wrapper {
         @include flexBox(center);
         flex-wrap: wrap;
@@ -167,12 +168,14 @@
         }
     }
 }
-// SOLUTIONS
+// SOLUTIONS responsive needed for m, l, and xl
 .home__solutions {
+    padding: 5rem 0;
+    background: #D7D7D72B;
     &__wrapper {
         @include flexBox;
         flex-direction: column;
-        gap: 4rem;
+        gap: 2rem;
         .home__solutions__context {
             max-width: 50.08rem;
             h2 {
@@ -203,6 +206,7 @@
                     @include textFormat(1.8, 1.5rem, 100);
                     padding: 0.8rem 2.5rem;
                     z-index: 10;
+                    @include transitionEase(0.5s);
                     &::before {
                         content: '';
                         position: absolute;
@@ -220,8 +224,100 @@
                     }
                     &:hover {
                         color: $clr-light;
+                        padding: 0.8rem 3rem;
                     }
                 }
+            }
+        }
+    }
+}
+// SOUL responsive needed for m, l, and xl
+.home__soul {
+    padding: 5rem 0;
+    &__wrapper {
+        @include flexBox;
+        flex-direction: column;
+        gap: 2rem;
+        .home__soul__context {
+            max-width: 50.08rem;
+            h2 {
+                @include textFormat(1.4, 2.5rem, 600);
+                color: #505060;
+                margin: 0 0 15px;
+            }
+            p {
+                @include textFormat(1.8, 1.5rem, 100);
+                color: #5f5f5f;
+            }
+        }
+        .home__soul__item__wrapper {
+            @include flexBox(center, center);
+            flex-direction: column;
+            flex-wrap: wrap;
+            gap: 2rem;
+            max-width: 50.08rem;
+            width: 100%;
+            .home__soul__item {
+                width: 100%;
+                filter: drop-shadow(0 0 5px lightgray);
+                background: $clr-light;
+                border-radius: 0 0 10px 0;
+                z-index: 111;
+                p {
+                    color: #505060;
+                    @include textFormat(1.8, 1.5rem, 100);
+                    padding: 0.8rem 2.5rem;
+                    z-index: 10;
+                    @include transitionEase(0.5s);
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        z-index: -999;
+                        top: 0;
+                        left: 0;
+                        height: 100%;
+                        width: 0.5%;
+                        border-radius: 0 0 10px 0;
+                        background: linear-gradient(to right, $clr-blue 50%, $clr-lavander);
+                        @include transitionEase(0.5s);
+                    }
+                    &:hover::before {
+                        width: 100%;
+                    }
+                    &:hover {
+                        color: $clr-light;
+                        padding: 0.8rem 3rem;
+                    }
+                }
+            }
+        }
+    }
+}
+// HOME STATUS responsive needed for m, l, and xl
+.home__status {
+    background: url(../img/banner-bg.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    .home__status__overlay {
+        background: rgba(97, 43, 223, 0.503);
+        padding: 5rem 0;
+    }
+    &__wrapper {
+        @include flexBox(space-around);
+        flex-wrap: wrap;
+        gap: 1.6rem;
+        .home__status__item {
+            width: 100%;
+            @include textFormat;
+            color: $clr-light;
+            text-align: center;
+            span {
+                @include textFormat(1.8, 4.5rem, 600);
+            }
+            h3 {
+                @include textFormat(1.8, 2rem, 100);
             }
         }
     }

@@ -17,7 +17,7 @@
             overflow: hidden;
             @include transitionEase;
             &.open {
-                max-height: 43%;
+                max-height: 47%;
                 overflow: auto;
             }
             ul {

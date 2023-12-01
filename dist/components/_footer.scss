@@ -1,6 +1,5 @@
 .footer {
     background-image: url(../img/banner-bg.jpg);
-    background-color: rgba(97, 43, 223, 0.614);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -142,7 +141,7 @@
                             height: 0;
                             border-radius: 30%;
                             background: $clr-darkblue;
-                            transition: width 0.5s, height 0.5s;
+                            transition: width 0.8s, height 0.8s;
                         }
                         &:hover::before {
                             width: 1000px;
