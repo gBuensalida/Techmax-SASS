@@ -1430,4 +1430,277 @@ img {
   line-height: 1.8;
   font-size: 2rem;
   font-weight: 100;
+}
+
+.ContactPage {
+  background-image: url(../img/page-title-bg.jpg);
+  background-size: cover;
+  background-position: center center;
+  height: 45vh;
+}
+.ContactPage .container {
+  height: 100%;
+  background-color: rgba(67, 67, 221, 0.281);
+}
+.ContactPage .container .ContactPage-wrapper {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ContactPage .container .ContactPage-wrapper .text {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-top: 4rem;
+  align-items: center;
+}
+.ContactPage .container .ContactPage-wrapper .text .text1 {
+  text-align: center;
+}
+.ContactPage .container .ContactPage-wrapper .text .text1 h3 {
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+}
+.ContactPage .container .ContactPage-wrapper .text .text2 {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.ContactPage .container .ContactPage-wrapper .text .text2 p {
+  color: white;
+  font-weight: bold;
+}
+.ContactPage .container .ContactPage-wrapper .text .text2 span {
+  display: flex;
+  height: 0.5rem;
+  width: 0.5rem;
+  background-color: blue;
+  border-radius: 3rem;
+}
+@media screen and (min-width: 1080px) {
+  .ContactPage {
+    height: 60vh;
+  }
+}
+
+.Content-container {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 0;
+}
+.Content-container .ContactPage-grid {
+  height: 80vh;
+  padding: 2rem 2rem;
+}
+.Content-container .ContactPage-grid .grid-container {
+  width: 100%;
+  padding: 5rem 2rem;
+  box-shadow: 0px 80px 80px rgba(0, 0, 0, 0.15);
+  border-radius: 1rem;
+  background-size: cover;
+  background-position: center;
+  border-bottom: 2px solid blue;
+  box-sizing: border-box;
+}
+.Content-container .ContactPage-grid .grid-container .grid-wrapper .grid-text {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+.Content-container .ContactPage-grid .grid-container .grid-wrapper .grid-text .gridtext1 h3 {
+  color: black;
+  padding-bottom: 1rem;
+}
+.Content-container .ContactPage-grid .grid-container .grid-wrapper .grid-text .gridtext1 p {
+  font-size: 1.4rem;
+  color: black;
+}
+.Content-container .ContactPage-grid .grid-container .grid-wrapper .grid-text .grid-icons1 i {
+  position: absolute;
+  bottom: 20rem;
+  font-size: 8rem;
+  opacity: 0.2;
+  padding-left: 1rem;
+  color: #5e87eb;
+}
+.Content-container .ContactPage-grid .grid-container .grid-wrapper .grid-text .gridtext2 h3 {
+  color: black;
+  padding-bottom: 1rem;
+}
+.Content-container .ContactPage-grid .grid-container .grid-wrapper .grid-text .gridtext2 p {
+  font-size: 1.4rem;
+  color: black;
+}
+.Content-container .ContactPage-grid .grid-container .grid-wrapper .grid-text .grid-icons2 i {
+  position: absolute;
+  top: 13.5rem;
+  font-size: 8.5rem;
+  opacity: 0.2;
+  color: #5e87eb;
+}
+.Content-container .ContactPage-grid .grid-container .grid-wrapper .grid-text .gridtext3 {
+  width: 100%;
+}
+.Content-container .ContactPage-grid .grid-container .grid-wrapper .grid-text .gridtext3 h3 {
+  color: black;
+  padding-bottom: 1rem;
+}
+.Content-container .ContactPage-grid .grid-container .grid-wrapper .grid-text .gridtext3 p {
+  font-size: 1.4rem;
+  color: black;
+}
+.Content-container .ContactPage-grid .grid-container .grid-wrapper .grid-text .grid-icons3 i {
+  position: absolute;
+  top: 27rem;
+  font-size: 8rem;
+  opacity: 0.2;
+  color: #5e87eb;
+}
+@media screen and (min-width: 1080px) {
+  .Content-container .ContactPage-grid .grid-container .grid-wrapper .grid-text {
+    gap: 5rem;
+  }
+}
+.Content-container .Content {
+  display: flex;
+  flex-direction: column;
+}
+.Content-container .Content .Contact-form .Contact-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 0rem 1rem;
+}
+.Content-container .Content .Contact-form .Contact-container .Contact1 {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.Content-container .Content .Contact-form .Contact-container .Contact1 .Contact-content input {
+  width: 100%;
+  padding: 1.5rem;
+  background-color: lightgray;
+  border: 1px solid transparent;
+  border-left: 2px solid black;
+  border-radius: 0.5rem;
+  outline: none;
+}
+.Content-container .Content .Contact-form .Contact-container .Contact1 .Contact-content input:focus {
+  border-left: 3px solid blue;
+}
+.Content-container .Content .Contact-form .Contact-container .Contact2 {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.Content-container .Content .Contact-form .Contact-container .Contact2 .Contact-content input {
+  width: 100%;
+  padding: 1.5rem;
+  background-color: lightgray;
+  border: 1px solid transparent;
+  border-left: 2px solid black;
+  border-radius: 0.5rem;
+  outline: none;
+}
+.Content-container .Content .Contact-form .Contact-container .Contact2 .Contact-content input:focus {
+  border-left: 3px solid blue;
+}
+.Content-container .Content .Contact-form .Contact-container .Contact3 .Contact-content input {
+  width: 100%;
+  padding: 1.5rem;
+  background-color: lightgray;
+  border: 1px solid transparent;
+  border-left: 2px solid black;
+  border-radius: 0.5rem;
+  outline: none;
+}
+.Content-container .Content .Contact-form .Contact-container .Contact3 .Contact-content input:focus {
+  border-left: 3px solid blue;
+}
+.Content-container .Content .Contact-form .Contact-container .Contact3 .Contact-content textarea {
+  width: 100%;
+  padding: 1.5rem;
+  background-color: lightgray;
+  border: 1px solid transparent;
+  border-left: 2px solid black;
+  border-radius: 0.5rem;
+  outline: none;
+  height: 23.5vh;
+}
+.Content-container .Content .Contact-form .Contact-container .Contact3 .Contact-content textarea:focus {
+  border-left: 3px solid blue;
+}
+.Content-container .Content .Contact-btn {
+  margin-top: 2rem;
+  margin-left: 1rem;
+  text-align: center;
+  display: flex;
+}
+.Content-container .Content .Contact-btn a {
+  font-size: 1.4rem;
+  color: white;
+  background: #5e87eb;
+  border: 1px solid transparent;
+  border-radius: 50px;
+  padding: 1rem 2.5rem;
+}
+@media screen and (min-width: 1080px) {
+  .Content-container {
+    flex-direction: row;
+    padding: 5rem 8rem;
+    align-items: center;
+  }
+  .Content-container .ContactPage-grid {
+    width: 35%;
+    display: flex;
+    padding: 5rem 2rem;
+  }
+  .Content-container .ContactPage-grid .grid-container {
+    width: 100%;
+    padding: 1rem 3rem;
+  }
+  .Content-container .Content {
+    width: 65%;
+  }
+  .Content-container .Content .Contact-form .Contact-container {
+    width: 100%;
+    height: 47vh;
+  }
+  .Content-container .Content .Contact-form .Contact-container .Contact1 {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .Content-container .Content .Contact-form .Contact-container .Contact1 .Contact-content {
+    width: 100%;
+  }
+  .Content-container .Content .Contact-form .Contact-container .Contact2 {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .Content-container .Content .Contact-form .Contact-container .Contact2 .Contact-content {
+    width: 100%;
+  }
+  .Content-container .Content .Contact-form .Contact-container .Contact3 .Contact-content {
+    height: 11.8rem;
+  }
+  .Content-container .Content .Contact-form .Contact-container .Contact3 .Contact-content textarea {
+    height: 100%;
+  }
+  .Content-container .Content .Contact-btn {
+    margin-bottom: 2.5rem;
+  }
+  .Content-container .Content .Contact-btn a {
+    font-size: 1.4rem;
+    color: white;
+  }
+}
+
+.Contact-map p {
+  display: flex;
+}
+.Contact-map p iframe {
+  width: 100%;
 }/*# sourceMappingURL=main.css.map */
