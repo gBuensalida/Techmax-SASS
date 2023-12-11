@@ -16,8 +16,9 @@
             max-height: 0rem;
             overflow: hidden;
             @include transitionEase;
+            z-index: 999;
             &.open {
-                max-height: 47%;
+                max-height: 43%;
                 overflow: auto;
             }
             ul {

@@ -153,9 +153,10 @@ img {
   max-height: 0rem;
   overflow: hidden;
   transition: 0.5s ease;
+  z-index: 999;
 }
 .header__wrapper .header__nav.open {
-  max-height: 47%;
+  max-height: 43%;
   overflow: auto;
 }
 .header__wrapper .header__nav ul {
