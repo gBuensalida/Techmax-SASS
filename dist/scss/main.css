@@ -134,9 +134,32 @@ img {
   border-radius: 3rem;
 }
 
+@keyframes fadeInDown {
+  0% {
+    -webkit-transform: translate3d(0, -100%, 0);
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+  to {
+    -webkit-transform: translateZ(0);
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
 .header {
   background: transparent;
-  box-shadow: 0 0 3px lightgrey;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+}
+.header.sticky {
+  background: white;
+  position: fixed;
+  box-shadow: 0 7px 13px 0 rgba(0, 0, 0, 0.1);
+  top: 0;
+  animation: fadeInDown 0.5s ease-in-out;
 }
 .header__wrapper {
   display: flex;
@@ -145,19 +168,20 @@ img {
 }
 .header__wrapper .header__nav {
   position: absolute;
-  width: 90%;
+  width: 94%;
   background: white;
-  left: 5%;
+  left: 3%;
   top: 6.6rem;
   filter: drop-shadow(0 0 3px lightgray);
-  max-height: 0rem;
+  max-height: 0;
   overflow: hidden;
   transition: 0.5s ease;
   z-index: 999;
 }
 .header__wrapper .header__nav.open {
-  max-height: 43%;
-  overflow: auto;
+  transition: 0.5s ease;
+  max-height: 42.7vh;
+  overflow-y: scroll;
 }
 .header__wrapper .header__nav ul {
   display: flex;
@@ -211,15 +235,17 @@ img {
   opacity: 0;
 }
 .header__wrapper .header__nav ul li .dropdown__menu {
-  max-height: 0rem;
+  max-height: auto;
+  max-height: 0;
   overflow: hidden;
   background: white;
+  transition: 0.5s ease;
 }
 .header__wrapper .header__nav ul li .dropdown__menu li a {
-  padding: 1.5rem 3rem;
+  padding: 1.5rem 3.5rem;
 }
 .header__wrapper .header__nav ul li .dropdown__menu.open {
-  max-height: 100%;
+  max-height: 50vh;
 }
 .header__wrapper .header__btn {
   display: none;
@@ -337,10 +363,6 @@ img {
   .header__wrapper .burger__btn {
     display: none;
   }
-}
-
-.section {
-  height: 100vh;
 }
 
 .footer {
@@ -1085,10 +1107,10 @@ img {
 }
 
 .home__banner {
-  padding: 5rem 0;
+  padding: 10rem 0;
   background: url(../img/home-bg.jpg);
-  background-position: center center;
   background-size: cover;
+  background-position: center center;
   background-repeat: no-repeat;
 }
 .home__banner__wrapper {

@@ -1,9 +1,9 @@
 // BANNER responsive missing for m, and l
 .home__banner {
-    padding: 5rem 0;
+    padding: 10rem 0;
     background: url(../img/home-bg.jpg);
-    background-position: center center;
     background-size: cover;
+    background-position: center center;
     background-repeat: no-repeat;
     &__wrapper {
         @include flexBox(center, center);
