@@ -1,20 +1,39 @@
-// BANNER responsive missing for m, and l
+// BANNER responsive fix needed for all
 .home__banner {
-    padding: 10rem 0;
+    padding: 18rem 0 10rem;
     background: url(../img/home-bg.jpg);
     background-size: cover;
-    background-position: center center;
     background-repeat: no-repeat;
+    background-position: 60%;
+    position: relative;
+    overflow: hidden;
+    &::before {
+        content: '';
+        height: 500px;
+        width: 500px;
+        border-radius: 500px;
+        position: absolute;
+        bottom: -20%;
+        left: -10%;
+        background-color: rgb(215, 215, 215, 0.17);
+    }
     &__wrapper {
         @include flexBox(center, center);
         flex-wrap: wrap;
+        gap: 5rem;
         .home__banner__text {
             @include flexBox(center);
             flex-direction: column;
             text-align: center;
+            gap: 1.8rem;
+            max-width: 45rem;
+            span.top {
+                color: $clr-blue;
+                @include textFormat(1.4, 1.8rem, 600);
+                letter-spacing: 1px;
+            }
             h1 {
-                @include textFormat(1.4, 3.2rem);
-                margin: 0 0 1.8rem;
+                @include textFormat(1.4, 3.5rem);
                 color: $clr-dark;
                 span {
                     color: $clr-blue;
@@ -26,19 +45,66 @@
             }
             .home__banner__textBtn {
                 @include flexBox(center);
-                gap: 0.5rem;
-                margin: 2rem 0 0;
+                margin: 1rem 0 0 0;
+                gap: 1rem;
                 a {
-                    @include btnFormat(1.2rem 3.5rem, 600);
+                    @include btnFormat(1.2rem 4rem, 100);
+                    @include transitionEase;
                 }
                 .learnBtn {
                     @extend %btnWhite;
-                    filter: drop-shadow(0 0 8px rgba(211, 211, 211, 0.562))
+                    filter: drop-shadow(0 0 8px rgba(211, 211, 211, 0.562));
+                    overflow: hidden;
+                    position: relative;
+                    z-index: 10;
+                    &:hover {
+                        color: $clr-light;
+                    }
+                    &::before {
+                        z-index: -999;
+                        content: '';
+                        position: absolute;
+                        top: var(--y);
+                        left: var(--x);
+                        transform: translate(-50%, -50%);
+                        width: 0;
+                        height: 0;
+                        border-radius: 30%;
+                        background: $clr-darkblue;
+                        transition: width 0.6s, height 0.6s;
+                    }
+                    &:hover::before {
+                        width: 300px;
+                        height: 300px;
+                    }
                 }
                 .contactBtn {
                     @extend %btnBlue;
+                    overflow: hidden;
+                    position: relative;
+                    z-index: 10;
+                    &::before {
+                        z-index: -999;
+                        content: '';
+                        position: absolute;
+                        top: var(--y);
+                        left: var(--x);
+                        transform: translate(-50%, -50%);
+                        width: 0;
+                        height: 0;
+                        border-radius: 30%;
+                        background: $clr-darkblue;
+                        transition: width 0.6s, height 0.6s;
+                    }
+                    &:hover::before {
+                        width: 300px;
+                        height: 300px;
+                    }
                 }
             }
+        }
+        .home__banner__img {
+            z-index: 1;
         }
     }
     @include mediaQuery($breakpoint-xl) {
@@ -62,23 +128,24 @@
         }
     }
 }
-// SERVICES responsive done 
+// SERVICES responsive fix needed for all 
 .home__services {
     padding: 5rem 0;
     background: $clr-light;
+    z-index: 1;
     .home__services__wrapper {
         @include flexBox(center);
         flex-wrap: wrap;
         gap: 3rem;
         .home__services__item {
-            @include flexBox(center);
+            @include flexBox(center, flex-start);
             flex-direction: column;
             background: $clr-light;
             filter: drop-shadow(0 0 5px lightgray);
             max-width: 51rem;
             padding: 3rem;
             gap: 2.5rem;
-            border-radius: 2rem;
+            border-radius: 1rem;
             @include transitionEase;
             &:hover {
                 background: $clr-lavander;
@@ -102,31 +169,32 @@
             }
             .home__services__icon {
                 background: #D7D7D72B;
-                border-radius: 50%;
+                border-radius: 20px 20px 20px 5px;
                 padding: 1.9rem;
                 @include transitionEase;
-                color: $clr-lavander;
+                color: #635cdb;
                 i {
                     font-size: 3.5rem;
                 }
             }
             .home__services__context {
-                text-align: center;
+                text-align: left;
                 max-width: 45rem;
                 h3 {
-                    @include textFormat(1.8, 1.8rem);
+                    @include textFormat(1.8, 2rem);
                     margin: 0 0 1.5rem;
                     color: $clr-dark;
                 }
                 p {
-                    @include textFormat(1.8, 1.5rem, 100);
+                    @include textFormat(1.8, 1.6rem, 100);
                     color: $clr-dark5;
                 }
             }
             .home__services__link {
                 a {
                     text-decoration: underline;
-                    @include textFormat(1.8, 1.8rem, 100);
+                    @include textFormat(1.8, 1.6rem, 400);
+                    color: #635cdb;
                 }
             }
         }
@@ -207,6 +275,7 @@
                     padding: 0.8rem 2.5rem;
                     z-index: 10;
                     @include transitionEase(0.5s);
+                    position: relative;
                     &::before {
                         content: '';
                         position: absolute;

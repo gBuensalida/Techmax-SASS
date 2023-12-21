@@ -14,14 +14,16 @@ links.forEach((link) => {
     })
 })
 
-const btnHover = document.querySelector(".footer__sbcrbBtn a");
-btnHover.onmousemove = function(e) {
-    const x = e.pageX - btnHover.offsetLeft;
-    const y = e.pageY - btnHover.offsetTop;
-
-    btnHover.style.setProperty('--x', x + 'px');
-    btnHover.style.setProperty('--y', y + 'px');
-}
+const btnHovers = document.querySelectorAll(".ripple");
+btnHovers.forEach((btnHover) => {
+    btnHover.onmousemove = function(e) {
+        const x = e.pageX - btnHover.offsetLeft;
+        const y = e.pageY - btnHover.offsetTop;
+    
+        btnHover.style.setProperty('--x', x + 'px');
+        btnHover.style.setProperty('--y', y + 'px');
+    }
+})
 
 window.addEventListener('scroll', () => {
     var header = document.querySelector('.header');

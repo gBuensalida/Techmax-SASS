@@ -4,35 +4,31 @@
     background-position: center center;
     background-repeat: no-repeat;
     .footer__overlay {
-        background: rgba(97, 43, 223, 0.403);
+        background: rgba(97, 43, 223, 0.585);
     }
     .container {
-        padding: 10rem 2rem;
+        padding: 10rem 1rem;
     }
     &__wrapper {
         @include flexBox(unset, unset);
         flex-wrap: wrap;
         gap: 1.5rem;
         .footer__about {
-            h3 {
-                padding: 0 0 1rem;
-                margin: 0 0 1rem;
-                border-bottom: 1px solid $clr-light;
-                @include textFormat(1.8, 2rem);
-                color: $clr-light;
+            .footer__branding {
+                margin: 0 0 1.5rem;
             }
             p {
-                @include textFormat(1.8, 1.5rem, 100);
+                @include textFormat(1.8, 1.6rem, 400);
                 color: $clr-light;
             }
         }
         .footer__socials {
-            margin: 2rem 0;
+            margin: 2rem 0 3rem;
             display: flex;
-            gap: 2rem;
+            gap: 1.3rem;
             i {
                 @extend %btnWhite;
-                border-radius: 1rem;
+                border-radius: 0.5rem;
                 @include btnFormat(1rem 1.5rem, 100, 2rem);
                 @include transitionEase;
                 &:hover {
@@ -125,7 +121,7 @@
                         width: 100%;
                         @extend %btnBlue;
                         border-radius: 0.5rem;
-                        @include btnFormat(2rem, 100, 1.5rem);
+                        @include btnFormat(1.5rem, 100, 1.5rem);
                         text-align: center;
                         overflow: hidden;
                         z-index: 10;
