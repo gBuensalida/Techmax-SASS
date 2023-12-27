@@ -132,7 +132,7 @@ input {
   border-radius: 3rem;
 }
 
-.home__banner__wrapper .home__banner__text .home__banner__textBtn .learnBtn, .footer__wrapper .footer__socials i {
+.home__team__wrapper .home__team__item__wrapper .home__item .home__item__img .home__hover i, .home__banner__wrapper .home__banner__text .home__banner__textBtn .learnBtn, .footer__wrapper .footer__socials i {
   background: white;
   color: #5e87eb;
   border-radius: 3rem;
@@ -407,13 +407,19 @@ input {
 }
 .footer__wrapper .footer__socials i {
   border-radius: 0.5rem;
-  padding: 1rem 1.5rem;
+  padding: 1rem;
   font-weight: 100;
   font-size: 2rem;
   transition: 0.5s ease;
 }
 .footer__wrapper .footer__socials i:hover {
-  border-radius: 1rem;
+  border-radius: 0.5rem;
+}
+.footer__wrapper .footer__socials #modifyFb {
+  padding: 1rem 1.3rem;
+}
+.footer__wrapper .footer__socials #modifyLinkedIn {
+  padding: 1rem 1.2rem;
 }
 .footer__wrapper .footer__services {
   width: 100%;
@@ -1362,7 +1368,7 @@ input {
 }
 .home__solutions__wrapper .home__solutions__context h2 {
   line-height: 1.4;
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 600;
   color: #505060;
   margin: 0 0 15px;
@@ -1395,7 +1401,7 @@ input {
   line-height: 1.8;
   font-size: 1.5rem;
   font-weight: 100;
-  padding: 0.8rem 2.5rem;
+  padding: 1.4rem 2.5rem;
   z-index: 10;
   transition: 0.5s ease;
   position: relative;
@@ -1417,7 +1423,7 @@ input {
 }
 .home__solutions__wrapper .home__solutions__item__wrapper .home__solutions__item p:hover {
   color: white;
-  padding: 0.8rem 3rem;
+  padding: 1.4rem 3rem;
 }
 
 .home__soul {
@@ -1435,7 +1441,7 @@ input {
 }
 .home__soul__wrapper .home__soul__context h2 {
   line-height: 1.4;
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 600;
   color: #505060;
   margin: 0 0 15px;
@@ -1468,7 +1474,7 @@ input {
   line-height: 1.8;
   font-size: 1.5rem;
   font-weight: 100;
-  padding: 0.8rem 2.5rem;
+  padding: 1.4rem 2.5rem;
   z-index: 10;
   transition: 0.5s ease;
 }
@@ -1489,7 +1495,7 @@ input {
 }
 .home__soul__wrapper .home__soul__item__wrapper .home__soul__item p:hover {
   color: white;
-  padding: 0.8rem 3rem;
+  padding: 1.4rem 3rem;
 }
 
 .home__status {
@@ -1526,6 +1532,101 @@ input {
 .home__status__wrapper .home__status__item h3 {
   line-height: 1.8;
   font-size: 2rem;
+  font-weight: 100;
+}
+
+.home__team {
+  padding: 5rem 0;
+}
+.home__team__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5rem;
+}
+.home__team__wrapper .home__title h1 {
+  line-height: 1.8;
+  font-size: 3.3rem;
+  font-weight: 600;
+}
+.home__team__wrapper .home__team__item__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+.home__team__wrapper .home__team__item__wrapper .home__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+.home__team__wrapper .home__team__item__wrapper .home__item .home__item__img {
+  max-width: 45.92rem;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.home__team__wrapper .home__team__item__wrapper .home__item .home__item__img:hover .home__hover {
+  opacity: 100%;
+}
+.home__team__wrapper .home__team__item__wrapper .home__item .home__item__img:hover img {
+  transform: scale(1.09);
+}
+.home__team__wrapper .home__team__item__wrapper .home__item .home__item__img:hover .home__hover i {
+  transform: scale(1);
+}
+.home__team__wrapper .home__team__item__wrapper .home__item .home__item__img .home__hover {
+  background: rgba(97, 43, 223, 0.8);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 10px;
+  transition: 0.5s ease;
+}
+.home__team__wrapper .home__team__item__wrapper .home__item .home__item__img .home__hover i {
+  border-radius: 0.5rem;
+  padding: 1rem;
+  font-weight: 100;
+  font-size: 2rem;
+  transition: 0.5s ease;
+  transform: scale(0);
+}
+.home__team__wrapper .home__team__item__wrapper .home__item .home__item__img .home__hover #modifyFb {
+  padding: 1rem 1.3rem;
+}
+.home__team__wrapper .home__team__item__wrapper .home__item .home__item__img .home__hover #modifyLinkedIn {
+  padding: 1rem 1.2rem;
+}
+.home__team__wrapper .home__team__item__wrapper .home__item .home__item__img img {
+  width: 100rem;
+  border-radius: 10px;
+  transition: 0.5s ease;
+}
+.home__team__wrapper .home__team__item__wrapper .home__item .home__item__label {
+  text-align: center;
+}
+.home__team__wrapper .home__team__item__wrapper .home__item .home__item__label .home__item__label__name h3 {
+  color: #333333;
+  line-height: 1.4;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.home__team__wrapper .home__team__item__wrapper .home__item .home__item__label .home__item__label__position span {
+  color: #602bdf;
+  line-height: 1.4;
+  font-size: 1.5rem;
   font-weight: 100;
 }
 

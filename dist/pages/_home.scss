@@ -247,7 +247,7 @@
         .home__solutions__context {
             max-width: 50.08rem;
             h2 {
-                @include textFormat(1.4, 2.5rem, 600);
+                @include textFormat(1.4, 3rem, 600);
                 color: #505060;
                 margin: 0 0 15px;
             }
@@ -272,7 +272,7 @@
                 p {
                     color: #505060;
                     @include textFormat(1.8, 1.5rem, 100);
-                    padding: 0.8rem 2.5rem;
+                    padding: 1.4rem 2.5rem;
                     z-index: 10;
                     @include transitionEase(0.5s);
                     position: relative;
@@ -293,7 +293,7 @@
                     }
                     &:hover {
                         color: $clr-light;
-                        padding: 0.8rem 3rem;
+                        padding: 1.4rem 3rem;
                     }
                 }
             }
@@ -310,7 +310,7 @@
         .home__soul__context {
             max-width: 50.08rem;
             h2 {
-                @include textFormat(1.4, 2.5rem, 600);
+                @include textFormat(1.4, 3rem, 600);
                 color: #505060;
                 margin: 0 0 15px;
             }
@@ -335,7 +335,7 @@
                 p {
                     color: #505060;
                     @include textFormat(1.8, 1.5rem, 100);
-                    padding: 0.8rem 2.5rem;
+                    padding: 1.4rem 2.5rem;
                     z-index: 10;
                     @include transitionEase(0.5s);
                     &::before {
@@ -355,7 +355,7 @@
                     }
                     &:hover {
                         color: $clr-light;
-                        padding: 0.8rem 3rem;
+                        padding: 1.4rem 3rem;
                     }
                 }
             }
@@ -387,6 +387,92 @@
             }
             h3 {
                 @include textFormat(1.8, 2rem, 100);
+            }
+        }
+    }
+}
+// HOME TEAM responsive needed for m, l, xl
+.home__team {
+    padding: 5rem 0;
+    &__wrapper {
+        @include flexBox(center);
+        flex-direction: column;
+        gap: 5rem;
+        .home__title {
+            h1 {
+                @include textFormat(1.8, 3.3rem);
+            }
+        }
+        .home__team__item__wrapper {
+            @include flexBox(center);
+            flex-wrap: wrap;
+            gap: 3rem;
+            .home__item {
+                @include flexBox(center);
+                flex-direction: column;
+                gap: 2rem;
+                .home__item__img {
+                    max-width: 45.92rem;
+                    position: relative;
+                    display: flex;
+                    overflow: hidden;
+                    border-radius: 10px;
+                    &:hover .home__hover{
+                        opacity: 100%;
+                    }
+                    &:hover img {
+                        transform: scale(1.09);
+                    }
+                    &:hover .home__hover i {
+                        transform: scale(1);
+                    }
+                    .home__hover {
+                        background: rgba(97, 43, 223, 0.800);;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        opacity: 0;
+                        height: 100%;
+                        @include flexBox(center);
+                        gap: 1rem;
+                        border-radius: 10px;
+                        @include transitionEase;
+                        i {
+                            @extend %btnWhite;
+                            border-radius: 0.5rem;
+                            @include btnFormat(1rem, 100, 2rem);
+                            @include transitionEase;
+                            transform: scale(0);
+                        }
+                        #modifyFb {
+                            padding: 1rem 1.3rem;
+                        }
+                        #modifyLinkedIn {
+                            padding: 1rem 1.2rem;
+                        }
+                    }
+                    img {
+                        width: 100rem;
+                        border-radius: 10px;
+                        @include transitionEase;
+                    }
+                }
+                .home__item__label {
+                    text-align: center;
+                    .home__item__label__name {
+                        h3 {
+                            color: $clr-dark;
+                            @include textFormat(1.4, 1.8rem)
+                        }
+                    }
+                    .home__item__label__position {
+                        span {
+                            color: $clr-lavander;
+                            @include textFormat(1.4, 1.5rem, 100)
+                        }
+                    }
+                }
             }
         }
     }

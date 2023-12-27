@@ -29,13 +29,20 @@
             i {
                 @extend %btnWhite;
                 border-radius: 0.5rem;
-                @include btnFormat(1rem 1.5rem, 100, 2rem);
+                @include btnFormat(1rem, 100, 2rem);
                 @include transitionEase;
                 &:hover {
                     @extend %btnBlue;
-                    border-radius: 1rem;
+                    border-radius: 0.5rem;
                 }
             }
+            #modifyFb {
+                padding: 1rem 1.3rem;
+            }
+            #modifyLinkedIn {
+                padding: 1rem 1.2rem;
+            }
+
         }
         .footer__services {
             width: 100%;
