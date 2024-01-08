@@ -16,7 +16,7 @@ links.forEach((link) => {
 
 const btnHovers = document.querySelectorAll(".ripple");
 btnHovers.forEach((btnHover) => {
-    btnHover.onmousemove = function(e) {
+    btnHover.onmousemove = (e) => {
         const x = e.pageX - btnHover.offsetLeft;
         const y = e.pageY - btnHover.offsetTop;
     
@@ -29,3 +29,36 @@ window.addEventListener('scroll', () => {
     var header = document.querySelector('.header');
     header.classList.toggle("sticky", window.scrollY > 100);
 })
+
+
+
+let section_counter = document.querySelector('.home__status');
+let counters = document.querySelectorAll('.counter');
+
+// Scroll Animation
+
+let CounterObserver = new IntersectionObserver(
+  (entries, observer) => {
+    let [entry] = entries;
+    if (!entry.isIntersecting) return;
+
+    let speed = 500;
+    counters.forEach((counter, index) => {
+      function UpdateCounter() {
+        const targetNumber = +counter.dataset.target;
+        const initialNumber = +counter.innerText;
+        const incPerCount = targetNumber / speed;
+        if (initialNumber < targetNumber) {
+          counter.innerText = Math.ceil(initialNumber + incPerCount);
+          setTimeout(UpdateCounter, 30);
+        }
+        else {
+          counter.innerText = targetNumber;
+        }
+      }
+      UpdateCounter();
+    });
+  },
+);
+
+CounterObserver.observe(section_counter);
