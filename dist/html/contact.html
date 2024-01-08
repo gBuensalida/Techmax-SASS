@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Techmax</title>
+    <title>ContactPage</title>
     <link rel="stylesheet" href="../scss/main.css">
-    <link href='https://fonts.googleapis.com/css?family=Cabin' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/d155f85222.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <!-- HEADER -->
     <header class="header">
         <div class="container">
             <div class="header__wrapper">
@@ -66,10 +65,10 @@
                         <li><a href="../html/contact.html">Contact</a></li>
                     </ul>
                 </div>
-                <div class="header__btn">
+                <div class="header__btn ripple">
                     <a href="">Log In</a>
                     <span></span>
-                    <a href="">Get Quotes</a>
+                    <a href="" class="ripple">Get Quotes</a>
                 </div>
                 <div class="burger__btn">
                     <span></span>
@@ -79,7 +78,7 @@
             </div>
         </div>
     </header>
-    <!-- CONTACT -->
+
     <section class="ContactPage">
         <div class="container">
             <div class="ContactPage-wrapper">
@@ -88,103 +87,95 @@
                         <h3>Contact Us</h3>
                     </div>
                     <div class="text2">
-                        <p>Home</p>
+                        <p>HOME</p>
                         <span></span>
-                        <p>Contact</p>
+                        <p>CONTACT</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="Content-container">
-        <section class="ContactPage-grid">
-            <div class="grid-container">
-                <div class="grid-wrapper">
-                    <div class="grid-text">
-                        <div class="gridtext1">
-                            <h3>Address:</h3>
+    <section class="MainBox">
+
+        <div class="ContactBox">
+            <div class="ContactBox-container">
+                <div class="ContactBox-wrapper">
+                    <div class="ContactBox-text">
+                        <div class="ContactBox-text1">
+                            <h1>Address:</h1>
                             <p>4035 Heavens,</p>
                             <p>Los Angeles, California</p>
-                        <div class="grid-icons1">
-                            <i class="fa-solid fa-location-dot"></i>
+                            <div class="ContactBox-icons1">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
                         </div>
-                        </div>
-                        <div class="gridtext2">
-                            <h3>Phone:</h3>
+
+                        <div class="ContactBox-text2">
+                            <h1>Phone:</h1>
                             <p>+000 313 577 111</p>
                             <p>+000 313 577 222</p>
-                        <div class="grid-icons2">
+                        <div class="ContactBox-icons2">
                             <i class="fa-solid fa-phone"></i>
                         </div>
                         </div>
-                        <div class="gridtext3">
-                            <h3>Email:</h3>
+
+                        <div class="ContactBox-text3">
+                            <h1>Email:</h1>
                             <p>info@example.com</p>
                             <p>support@example.com</p>
-                        <div class="grid-icons3">
+                        <div class="ContactBox-icons3">
                             <i class="fa-regular fa-envelope"></i>
                         </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-       
-        <div class="Content">
-            <section class="Contact-form">
-                <div class="Contact-container">
-                    <div class="Contact1">
-                        <div class="Contact-content">
-                            <input type="text" placeholder="Your Name">
-                        </div>
-                        <div class="Contact-content">
-                            <input type="text" placeholder="Your Email">
-                        </div>
-                    </div>
 
-                    <div class="Contact2">
-                        <div class="Contact-content">
-                            <input type="text" placeholder="Your Phone">
-                        </div>
-                        <div class="Contact-content">
-                            <input type="text" placeholder="Your Subject">
-                        </div>
-                    </div>
-                    
-                    <div class="Contact3">
-                        <div class="Contact-content">
-                            <textarea rows="5" placeholder="Your Message"></textarea>
-                        </div>
                     </div>
                 </div>
-            </section>
-            <div class="Contact-btn">
-                <a href="">Send Message</a>
             </div>
         </div>
-    </div>
-    <br>
-
-    <section class="Contact-map">
-        <p>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387102.473107599!2d-74.00597280492752!3d40.71277533637272!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sph!4v1700933716161!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </p>
-    </section>
     
-    <!-- FOOTER -->
+        <div class="ContactfillBox">
+            <div class="ContactfillBox-container">
+                <div class="ContactfillBox-wrapper">
+                    <div class="ContactfillBox-text">
+                        <div class="ContactfillBox-text1">
+                            <input type="" placeholder="Your Name">
+                            <input type="" placeholder="Your Email">
+                        </div>
+                        <div class="ContactfillBox-text2">
+                            <input type="" placeholder="Your Phone">
+                            <input type="" placeholder="Your Subject">
+                        </div>
+                        <div class="ContactfillBox-text3">
+                            <textarea placeholder="Your Message" rows="6"></textarea>
+                        </div>
+                        <div class="ContactfillBox-button">
+                            <a href="">Send Message</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </section>
+
+    <div class="ContactPage-Map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387191.33750346623!2d-73.97968099999999!3d40.6974881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sph!4v1704706784800!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
     <footer class="footer">
         <div class="footer__overlay">
             <div class="container">
                 <div class="footer__wrapper">
                     <div class="footer__about">
-                        <h3>About Us</h3>
+                        <div class="footer__branding">
+                            <img src="../img/logo-white.png" alt="">
+                        </div>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut   enim ad minim veniam, quis nostrud exercitation ullamco   consectetur laboris.</p>
                         <div class="footer__socials">
-                            <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href=""><i class="fa-brands fa-facebook-f" id="modifyFb"></i></a>
                             <a href=""><i class="fa-brands fa-twitter"></i></a>
-                            <a href=""><i class="fa-brands fa-pinterest"></i></a>
-                            <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                            <a href=""><i class="fa-brands fa-youtube"></i></a>
+                            <a href=""><i class="fa-brands fa-linkedin" id="modifyLinkedIn"></i></a>
                         </div>
                     </div>
                     
@@ -217,7 +208,7 @@
                             <div class="footer__emailInput">
                                 <input type="text" placeholder="Enter your email">
                             </div>
-                            <div class="footer__sbcrbBtn">
+                            <div class="footer__sbcrbBtn ripple">
                                 <a href="">Subscribe</a>
                             </div>
                         </div>
@@ -238,7 +229,8 @@
             </div>
         </div>
     </footer>
+
     <script src="../js/script.js"></script>
-    <script src="https://kit.fontawesome.com/98333f930b.js" crossorigin="anonymous"></script>
+
 </body>
 </html>

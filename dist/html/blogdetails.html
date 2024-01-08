@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Techmax</title>
+    <title>Document</title>
     <link rel="stylesheet" href="../scss/main.css">
-    <link href='https://fonts.googleapis.com/css?family=Cabin' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/3febd9a039.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header class="header">
@@ -65,10 +65,10 @@
                         <li><a href="../html/contact.html">Contact</a></li>
                     </ul>
                 </div>
-                <div class="header__btn">
+                <div class="header__btn ripple">
                     <a href="">Log In</a>
                     <span></span>
-                    <a href="">Get Quotes</a>
+                    <a href="" class="ripple">Get Quotes</a>
                 </div>
                 <div class="burger__btn">
                     <span></span>
@@ -78,8 +78,10 @@
             </div>
         </div>
     </header>
+    <div class="mema-section">
+        
+    </div>
 
-    <!-- BLOG DETAILS -->
     <section class="blogdetails1">
         <div class="container">
             <div class="blogdetails1-wrapper">
@@ -88,9 +90,9 @@
                         <h3>Blog Details</h3>
                     </div>
                     <div class="text2">
-                        <p>Home</p>
+                        <p>HOME</p>
                         <span></span>
-                        <p>Blog Details</p>
+                        <p>BLOG DETAILS</p>
                     </div>
                 </div>
             </div>
@@ -101,7 +103,7 @@
         <div class="container">
             <div class="blogdetails2-wrapper">
                 <div class="blogdetails2-content1">
-                    <img src="../img/blogdetails2.jpg" alt="">
+                    <img src="../images/blogdetails2.jpg" alt="">
                     <h4>Posted On: <a href="">July 20 - 2022</a> -  Posted By: <a href="">Floyd Medina</a></h4>
                     <h2>How Much Should You Be Spending On  Business?</h2>
                     <p>
@@ -114,8 +116,8 @@
                         Lorem ipsum dolor sit amet, consectetur     adipiscing elit, sed do eiusmod tempor  incididunt ut labore et dolore magna     aliqua. enim ad minim veniam, quis nostrud  exercitation ullamco laboris nisi ut     aliquip commodo consequat. Duis aute irure  dolor in reprehenderit in voluptate velit    esse cillum dolore eu fugiat nulla     pariatur. Excepteur sint occaecat   cupidatat non proident, sunt in culpa qui     officia deserunt mollit anim.
                     </p>
                     <div class="image-box">
-                        <img src="../img/blogdetails3.jpg" alt="">
-                        <img src="../img/blogdetails4.jpg" alt="">
+                        <img src="../images/blogdetails2.jpg" alt="">
+                        <img src="../images/blogdetails3.jpg" alt="">
                     </div>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur     adipiscing elit, sed do eiusmod tempor  incididunt ut labore et dolore magna     aliqua. enim ad minim veniam, quis nostrud  exercitation ullamco laboris nisi ut     aliquip commodo consequat. Duis aute irure  dolor in reprehenderit in voluptate velit    esse cillum dolore eu fugiat nulla     pariatur. Excepteur sint occaecat   cupidatat non proident, sunt in culpa qui     officia deserunt mollit anim.
@@ -145,9 +147,9 @@
                     </div>
                     <h1>3 Comments:</h1>
                     <div class="content-container">
-                        <div class="content">
+                        <div class="content"  style="padding-top: 0;">
                             <div class="content-image">
-                                <img src="../img/pic1.jpg"   alt="">
+                                <img src="../images/pic1.jpg"   alt="">
                             </div>
                             <div class="content-text">
                                 <div class="text1">
@@ -167,7 +169,7 @@
 
                         <div class="content">
                             <div class="content-image">
-                                <img src="../img/pic2.jpg"   alt="">
+                                <img src="../images/pic2.jpg"   alt="">
                             </div>
                             <div class="content-text">
                                 <div class="text1">
@@ -187,11 +189,11 @@
 
                         <div class="content">
                             <div class="content-image">
-                                <img src="../img/pic3.jpg"   alt="">
+                                <img src="../images/pic3.jpg"   alt="">
                             </div>
                             <div class="content-text">
                                 <div class="text1">
-                                    <h4>Oru Davis</h4>
+                                    <h4>Ora Davis</h4>
                                     <a href="">JANUARY 25 - 2022</a>
                                 </div>
                                 <div class="text2">
@@ -270,6 +272,7 @@
                     <div class="categories">
                         <h2>Categories</h2>
                         <div class="categories-container">
+                            <div class="blue-line"></div>
                             <div class="categories-content">
                                 <p>Business</p>
                                 <p>(40)</p>
@@ -299,6 +302,7 @@
                     <div class="tags">
                         <h2>Tags</h2>
                         <div class="tags-container">
+                            <div class="blue-line"></div>
                             <div class="tags-content1">
                                 <a href="">IT</a>
                                 <a href="">Technology</a>
@@ -317,20 +321,20 @@
             </div>
         </div>
     </section>
-    <!-- BLOG DETAILS -->
-
     <footer class="footer">
         <div class="footer__overlay">
             <div class="container">
                 <div class="footer__wrapper">
                     <div class="footer__about">
-                        <h3>About Us</h3>
+                        <div class="footer__branding">
+                            <img src="../img/logo-white.png" alt="">
+                        </div>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut   enim ad minim veniam, quis nostrud exercitation ullamco   consectetur laboris.</p>
                         <div class="footer__socials">
-                            <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href=""><i class="fa-brands fa-facebook-f" id="modifyFb"></i></a>
                             <a href=""><i class="fa-brands fa-twitter"></i></a>
-                            <a href=""><i class="fa-brands fa-pinterest"></i></a>
-                            <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                            <a href=""><i class="fa-brands fa-youtube"></i></a>
+                            <a href=""><i class="fa-brands fa-linkedin" id="modifyLinkedIn"></i></a>
                         </div>
                     </div>
                     
@@ -363,7 +367,7 @@
                             <div class="footer__emailInput">
                                 <input type="text" placeholder="Enter your email">
                             </div>
-                            <div class="footer__sbcrbBtn">
+                            <div class="footer__sbcrbBtn ripple">
                                 <a href="">Subscribe</a>
                             </div>
                         </div>
@@ -385,6 +389,6 @@
         </div>
     </footer>
     <script src="../js/script.js"></script>
-    <script src="https://kit.fontawesome.com/98333f930b.js" crossorigin="anonymous"></script>
+
 </body>
 </html>
