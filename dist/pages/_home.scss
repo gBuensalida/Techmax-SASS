@@ -999,3 +999,18 @@
     }
 }
 // PARTNERSHIP responsive needed for all
+.partnership {
+    &__wrapper {
+        .partnership__item__wrapper {
+            .partnership__item {
+                padding: 0 5rem;
+                img {
+                    transition: 0.5s ease;
+                    &:hover {
+                        opacity: 50%;
+                    }
+                }
+            }
+        }
+    }
+}

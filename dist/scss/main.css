@@ -2228,6 +2228,16 @@ input {
   }
 }
 
+.partnership__wrapper .partnership__item__wrapper .partnership__item {
+  padding: 0 5rem;
+}
+.partnership__wrapper .partnership__item__wrapper .partnership__item img {
+  transition: 0.5s ease;
+}
+.partnership__wrapper .partnership__item__wrapper .partnership__item img:hover {
+  opacity: 50%;
+}
+
 .ContactPage {
   background-image: url(../img/page-title-bg.jpg);
   background-size: cover;

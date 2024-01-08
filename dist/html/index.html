@@ -698,6 +698,38 @@
         </div>
     </section>
     <!-- PARTERSHIP -->
+    <section class="partnership swiper">
+        <div class="container">
+            <div class="partnership__wrapper">
+                <div class="partnership__item__wrapper swiper-wrapper">
+                    <div class="partnership__item swiper-slide">
+                        <img src="../img/client-1.jpg" alt="">
+                    </div>
+                    <div class="partnership__item swiper-slide">
+                        <img src="../img/client-2.jpg" alt="">
+                    </div>
+                    <div class="partnership__item swiper-slide">
+                        <img src="../img/client-3.jpg" alt="">
+                    </div>
+                    <div class="partnership__item swiper-slide">
+                        <img src="../img/client-4.jpg" alt="">
+                    </div>
+                    <div class="partnership__item swiper-slide">
+                        <img src="../img/client-5.jpg" alt="">
+                    </div>
+                    <div class="partnership__item swiper-slide">
+                        <img src="../img/client-6.jpg" alt="">
+                    </div>
+                    <div class="partnership__item swiper-slide">
+                        <img src="../img/client-7.jpg" alt="">
+                    </div>
+                    <div class="partnership__item swiper-slide">
+                        <img src="../img/client-8.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- FOOTER -->
     <footer class="footer">
         <div class="footer__overlay">
@@ -772,10 +804,42 @@
     <script src="../js/swiper-bundle.min.js"></script>
     <script>
         var swiper = new Swiper(".home__testimony__wrapper", {
-          slidesPerView: 3,
+          slidesPerView: 1,
           spaceBetween: 30,
           slidesPerGroup: 1,
           loop: true,
+          loopFillGroupWithBlank: true,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          breakpoints: {
+            0: {
+                slidesPerView: 1,
+            },
+            520: {
+                slidesPerView: 2,
+            },
+            950: {
+                slidesPerView: 3,
+            }
+          }
+        });
+      </script>
+    <script>
+        var swiper = new Swiper(".partnership__wrapper", {
+          slidesPerView: 1,
+          spaceBetween: 30,
+          slidesPerGroup: 1,
+          loop: true,
+          autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
           loopFillGroupWithBlank: true,
           pagination: {
             el: ".swiper-pagination",
